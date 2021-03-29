@@ -1,25 +1,91 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
+import { Circle } from './components/Circle';
+import { useApp } from './hooks/useApp';
+import { IconCheck } from './svgs/IconCheck';
+import { IconError } from './svgs/IconError';
+import { IconSuccess } from './svgs/IconSuccess';
 function App() {
+  const {
+    submitHandler,
+    question,
+    loading,
+    currAnswer,
+    testEnd,
+    currentQuestion,
+    testSuccess,
+    questionsCount,
+    setCurAnswer,
+  } = useApp();
+
+  if (loading) return <div>Зачекайте ...</div>;
+
+  if (!question[currentQuestion]) return <div>Нема запитань</div>;
+
+  const calcNum = +((currentQuestion / questionsCount) * 100).toFixed();
+
+  const innerHtml = `
+          <h2>Результат</h2>
+          <h4>Ви заробили 60 балiв</h4>
+          <p>
+            Ваші відповіді успішно збережені. Переходимо до останього завдання інтелектуальної гри —
+            есе.
+          </p>
+     `;
+
+  if (testEnd && testSuccess)
+    return (
+      <div className="testWrapper">
+        <div className="testResultIcon testResultIcon--success">
+          <IconSuccess />
+        </div>
+        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: innerHtml }} />
+      </div>
+    );
+  if (testEnd && !testSuccess)
+    return (
+      <div className="testWrapper">
+        <div className="testResultIcon testResultIcon--fail">
+          <IconError />
+        </div>
+        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: innerHtml }} />
+      </div>
+    );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="testWrapper">
+        <Circle question={currentQuestion} num={calcNum} />
+        <div className="testQuestionWrapper">
+          <h4 className="testTitle">{question[currentQuestion]?.question?.question_text}</h4>
+          <div className="testAnswers">
+            {question[currentQuestion].answers.map((answer) => (
+              <div
+                key={answer.answer_id}
+                onClick={() => setCurAnswer({ answer, question: question[currentQuestion].number })}
+                className={`testSelectWrapper ${
+                  String(currAnswer?.answer.answer_id) === String(answer.answer_id) ? 'active' : ''
+                }`}
+              >
+                <div className="testImageWrapper">
+                  <img src={answer.answer_pic} alt={answer.answer_text} />
+                </div>
+                <IconCheck />
+              </div>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            className="testBtn"
+            onClick={() => submitHandler(currAnswer)}
+            disabled={!currAnswer?.answer.answer_id}
+          >
+            Вiдповiсти
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
 
