@@ -1,0 +1,148 @@
+.testWrapper {
+  display: flex;
+  align-items: top;
+  max-width: 1200px;
+  margin: auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 10px;
+  }
+}
+
+.questionWrapper {
+  padding-left: 20px;
+}
+
+.testTitle {
+  font-size: 20px;
+  margin: 0;
+}
+
+.testQuestionWrapper {
+  flex: 1;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.testBtn {
+  background: #007bff;
+  color: white;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  outline: 0;
+  padding: 7px 15px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 17px;
+  display: flex;
+
+  &:disabled {
+    background: grey;
+    cursor: default;
+  }
+}
+
+.testAnswers {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .testSelectWrapper {
+    margin: 20px 10px;
+
+    .testImageWrapper {
+      opacity: 0.5;
+      min-height: 400px;
+      cursor: pointer;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .bi-check-square {
+      margin: 10px auto 20px;
+      display: flex;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      path {
+        &:nth-child(2) {
+          visibility: hidden;
+        }
+      }
+
+      &:hover {
+        path {
+          fill: #007bff;
+        }
+      }
+    }
+
+    &.active {
+      .testImageWrapper {
+        opacity: 1;
+      }
+      .bi-check-square {
+        path {
+          &:nth-child(2) {
+            visibility: visible;
+          }
+
+          fill: #007bff;
+        }
+      }
+    }
+  }
+}
+
+.testResultIcon {
+  width: 240px;
+  height: 240px;
+
+  svg {
+    width: 70%;
+    height: 70%;
+
+    path {
+      fill: #58b814;
+    }
+  }
+
+  &--success {
+    svg {
+      path {
+        fill: #58b814;
+      }
+    }
+  }
+  &--fail {
+    svg {
+      path {
+        fill: red;
+      }
+    }
+  }
+}

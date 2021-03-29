@@ -1,0 +1,248 @@
+{
+  "status": true,
+  "total_question": 9,
+  "questions": [
+    {
+      "number": 1,
+      "question": {
+        "question_id": "978",
+        "question_text": "1. Головний бухгалтер «малодохідного» підприємства хоче врахувати амортизацію невиробничих основних засобів на зменшення об’єкта оподаткування податком на прибуток. Керівник проти, каже це ризиковано. Хто, на Вашу думку, має рацію?"
+      },
+      "answers": [
+        {
+          "answer_id": "4363",
+          "answer_text": "Головний бухгалтер ",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4363.png"
+        },
+        {
+          "answer_id": "4364",
+          "answer_text": "Керівник",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4364.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 2,
+      "question": {
+        "question_id": "979",
+        "question_text": "2. Замінити податкову накладну може:"
+      },
+      "answers": [
+        {
+          "answer_id": "4365",
+          "answer_text": "прибутковий касовий ордер",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4365.png"
+        },
+        {
+          "answer_id": "4366",
+          "answer_text": "виписка банка",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4366.png"
+        },
+        {
+          "answer_id": "4367",
+          "answer_text": "фіскальний касовий чек",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4367.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 3,
+      "question": {
+        "question_id": "980",
+        "question_text": "3. Хто реєструє податкову накладну у ЄРПН:"
+      },
+      "answers": [
+        {
+          "answer_id": "4368",
+          "answer_text": "завжди постачальник",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4368.png"
+        },
+        {
+          "answer_id": "4369",
+          "answer_text": "завжди покупець",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4369.png"
+        },
+        {
+          "answer_id": "4370",
+          "answer_text": "постачальник, але при отриманні послуг нерезидента — отримувач послуг",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4370.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 4,
+      "question": {
+        "question_id": "981",
+        "question_text": "4. Допоможіть визначити, яке з цих підприємств є «високодохідним»?"
+      },
+      "answers": [
+        {
+          "answer_id": "4371",
+          "answer_text": "Отримав 20 млн грн доходу за попередній рік",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4371.png"
+        },
+        {
+          "answer_id": "4372",
+          "answer_text": "Отримав за останній звітний рік: 25 млн грн доходу від реалізації, 10 млн грн — фінансового доходу та 7 млн грн — дохід від участі у капіталі",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4372.png"
+        },
+        {
+          "answer_id": "4373",
+          "answer_text": "Отримав менше 40 млн грн будь-якого доходу за попередній рік",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4373.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 5,
+      "question": {
+        "question_id": "982",
+        "question_text": "5. Якщо заяву-розрахунок до Фонду соцстрахування подали у електронному вигляді, то чи потрібно на підприємстві зберігати її паперовий аналог?"
+      },
+      "answers": [
+        {
+          "answer_id": "4374",
+          "answer_text": "Так",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4374.png"
+        },
+        {
+          "answer_id": "4375",
+          "answer_text": "Ні",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4375.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 6,
+      "question": {
+        "question_id": "983",
+        "question_text": "6. Підприємство направляє працівника у дводенне відрядження Україною. Аванс наперед не видали. Чи є порушення?"
+      },
+      "answers": [
+        {
+          "answer_id": "4376",
+          "answer_text": "Так, порушили законодавство про працю",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4376.png"
+        },
+        {
+          "answer_id": "4377",
+          "answer_text": "Так, порушили законодавство про захист прав споживачів",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4377.png"
+        },
+        {
+          "answer_id": "4378",
+          "answer_text": "Ні, немає порушень",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4378.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 7,
+      "question": {
+        "question_id": "984",
+        "question_text": "7. Суб’єкт господарювання використовує РРО. Чи потрібно йому реєструвати та щоденно вести Книгу обліку розрахункових операцій (КОРО)?"
+      },
+      "answers": [
+        {
+          "answer_id": "4379",
+          "answer_text": "Так, КОРО має бути обов’язково",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4379.png"
+        },
+        {
+          "answer_id": "4380",
+          "answer_text": "Ні, КОРО взагалі не потрібна",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4380.png"
+        },
+        {
+          "answer_id": "4381",
+          "answer_text": "КОРО ведуть за бажанням",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4381.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 8,
+      "question": {
+        "question_id": "985",
+        "question_text": "8. Чи має підприємство вживати заходи для стягнення безнадійної дебіторки, за якою сплив строк позовної давності, щоб визнати її безнадійною в податковому обліку?"
+      },
+      "answers": [
+        {
+          "answer_id": "4382",
+          "answer_text": "Так, боржнику потрібно направляти запити",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4382.png"
+        },
+        {
+          "answer_id": "4383",
+          "answer_text": "Так, потрібно звертатися до суду і отримати рішення про визнання боржника банкрутом",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4383.png"
+        },
+        {
+          "answer_id": "4384",
+          "answer_text": "Ні, достатньо того, що сплив строк позовної давності",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4384.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    },
+    {
+      "number": 9,
+      "question": {
+        "question_id": "986",
+        "question_text": "9. Зовнішній сумісниці за березень 2021 року нарахували заробітну плату — 6000,00 грн. Працівниця має двох дітей віком до 18 років і подала заяву на застосування ПСП. Як розрахувати ПДФО?"
+      },
+      "answers": [
+        {
+          "answer_id": "4385",
+          "answer_text": "(6000 грн – 1135 грн) × 0,18",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4385.png"
+        },
+        {
+          "answer_id": "4386",
+          "answer_text": "(6000 грн – 2270 грн) × 0,18",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4386.png"
+        },
+        {
+          "answer_id": "4387",
+          "answer_text": "(6000 грн – 3180 грн) × 0,18",
+          "answer_pic": "https://best.golovbukh.ua/assets/js/tests/pic/281/4387.png"
+        }
+      ],
+      "answer": {
+        "answer_id": false,
+        "text": ""
+      }
+    }
+  ]
+}
