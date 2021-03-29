@@ -5,6 +5,7 @@ import { useMount } from './useMount';
 // declare var document: Document;
 
 export const useApp = () => {
+  const [showR, setShowR] = React.useState(false);
   const [questionsCount, setQuestionsCount] = React.useState(0);
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const [question, setQuestions] = React.useState<TQuestion[]>([]);
@@ -41,6 +42,7 @@ export const useApp = () => {
     if (!newAnswer) return null;
     if (currentQuestion !== questionsCount - 1) {
       const oldAnswers = [...answers];
+      setShowR(false);
       oldAnswers.push(newAnswer);
       setAnswers(oldAnswers);
       setCurAnswer(null);
@@ -69,5 +71,7 @@ export const useApp = () => {
     testSuccess,
     questionsCount,
     setCurAnswer,
+    showR,
+    setShowR,
   };
 };

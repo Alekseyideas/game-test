@@ -16,6 +16,8 @@ function App() {
     testSuccess,
     questionsCount,
     setCurAnswer,
+    showR,
+    setShowR,
   } = useApp();
 
   if (loading) return <div>Зачекайте ...</div>;
@@ -59,7 +61,7 @@ function App() {
         <Circle question={currentQuestion} num={calcNum} />
         <div className="testQuestionWrapper">
           <div className="testAnswers">
-            {question[currentQuestion].answers.map((answer) => (
+            {question[currentQuestion].answers.map((answer, i) => (
               <div
                 key={answer.answer_id}
                 onClick={() => setCurAnswer({ answer, question: question[currentQuestion].number })}
@@ -68,21 +70,30 @@ function App() {
                 }`}
               >
                 <div className="testImageWrapper">
-                  <img src={answer.answer_pic} alt={answer.answer_text} />
+                  <img
+                    src={answer.answer_pic}
+                    alt={answer.answer_text}
+                    onLoad={() => {
+                      if (question[currentQuestion].answers.length - 1 === i) {
+                        setShowR(true);
+                      }
+                    }}
+                  />
                 </div>
-                <IconCheck />
+                {showR ? <IconCheck /> : null}
               </div>
             ))}
           </div>
-
-          <button
-            type="button"
-            className="testBtn"
-            onClick={() => submitHandler(currAnswer)}
-            disabled={!currAnswer?.answer.answer_id}
-          >
-            Вiдповiсти
-          </button>
+          {showR ? (
+            <button
+              type="button"
+              className="testBtn"
+              onClick={() => submitHandler(currAnswer)}
+              disabled={!currAnswer?.answer.answer_id}
+            >
+              Вiдповiсти
+            </button>
+          ) : null}
         </div>
       </div>
     </div>

@@ -58,19 +58,18 @@
 .testBtn {
   background: #007bff;
   color: white;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
+  border-radius: 0;
   border: 0;
   color: white;
   cursor: pointer;
   outline: 0;
-  padding: 7px 15px;
+  padding: 10px 25px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
-  font-size: 17px;
+  font-size: 19px;
   display: flex;
-  margin: auto;
+  margin: 0;
   &:disabled {
     background: grey;
     cursor: default;
