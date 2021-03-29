@@ -53,11 +53,11 @@ function App() {
     );
 
   return (
-    <>
+    <div>
+      <h4 className="testTitle">{question[currentQuestion]?.question?.question_text}</h4>
       <div className="testWrapper">
         <Circle question={currentQuestion} num={calcNum} />
         <div className="testQuestionWrapper">
-          <h4 className="testTitle">{question[currentQuestion]?.question?.question_text}</h4>
           <div className="testAnswers">
             {question[currentQuestion].answers.map((answer) => (
               <div
@@ -85,7 +85,7 @@ function App() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

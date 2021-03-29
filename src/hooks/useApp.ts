@@ -2,6 +2,7 @@ import React from 'react';
 import { TQuestion, TUserAnswer } from '../store/types';
 import { callApi } from '../utils/callApi';
 import { useMount } from './useMount';
+// declare var document: Document;
 
 export const useApp = () => {
   const [questionsCount, setQuestionsCount] = React.useState(0);
@@ -12,8 +13,16 @@ export const useApp = () => {
   const [currAnswer, setCurAnswer] = React.useState<TUserAnswer | null>(null);
   const [testEnd, setTestEnd] = React.useState(false);
   const [testSuccess, setTestSuccess] = React.useState(false);
+  const [testId, setTestId] = React.useState<null | string>(null);
 
   const fn = async () => {
+    if (document.getElementById('sp')) document.getElementById('sp')!.style.display = 'flex';
+    if (document.getElementById('sp0')) document.getElementById('sp0')!.style.display = 'flex';
+    if (document.getElementById('test_id')) {
+      const input = document.getElementById('test_id') as HTMLInputElement;
+      setTestId(input.value);
+    }
+
     try {
       const data = await callApi('get', '/tests.json');
       setQuestionsCount(data.total_question || 0);
@@ -38,7 +47,12 @@ export const useApp = () => {
       return setCurrentQuestion((oldQ) => oldQ + 1);
     }
 
-    console.log(answers);
+    console.log(
+      JSON.stringify({
+        testId,
+        answers,
+      })
+    );
     setTestSuccess(true);
 
     setTestEnd(true);

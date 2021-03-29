@@ -3,7 +3,12 @@
   align-items: top;
   max-width: 1200px;
   margin: auto;
-
+  padding-top: 40px;
+  @media screen and (max-width: 993px) {
+    flex-direction: column;
+    margin: auto !important;
+    align-items: center;
+  }
   h1,
   h2,
   h3,
@@ -11,6 +16,14 @@
   h5,
   h6 {
     margin: 0 0 10px;
+  }
+
+  .progress-circle {
+    margin-top: 20px;
+    @media screen and (max-width: 993px) {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -21,12 +34,25 @@
 .testTitle {
   font-size: 20px;
   margin: 0;
+  padding-left: 240px;
+  max-width: 640px;
+  margin-top: 40px;
+  @media screen and (max-width: 993px) {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .testQuestionWrapper {
   flex: 1;
   padding-left: 40px;
   text-align: left;
+  max-width: 660px;
+
+  @media screen and (max-width: 993px) {
+    padding: 0;
+  }
 }
 
 .testBtn {
@@ -44,7 +70,7 @@
   transition: 0.2s;
   font-size: 17px;
   display: flex;
-
+  margin: auto;
   &:disabled {
     background: grey;
     cursor: default;

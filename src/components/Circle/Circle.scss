@@ -6,10 +6,10 @@ $back-color: #dddddd;
   background-color: $back-color;
   border-radius: 50%;
   display: inline-block;
-  height: 15rem;
+  height: 200px;
   // margin: 4rem 2rem 0;
   position: relative;
-  width: 15rem;
+  width: 200px;
 
   span {
     position: absolute;
@@ -18,7 +18,7 @@ $back-color: #dddddd;
     text-align: center;
     width: 100%;
     transform: translateY(-50%);
-    font-size: 7rem;
+    font-size: 110px;
   }
 }
 
