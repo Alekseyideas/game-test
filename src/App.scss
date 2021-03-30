@@ -4,6 +4,9 @@
   max-width: 1200px;
   margin: auto;
   padding-top: 40px;
+  @media screen and (min-width: 994px) {
+    min-height: 585px;
+  }
   @media screen and (max-width: 993px) {
     flex-direction: column;
     margin: auto !important;
@@ -49,9 +52,11 @@
   padding-left: 40px;
   text-align: left;
   max-width: 660px;
+  width: 660px;
 
   @media screen and (max-width: 993px) {
     padding: 0;
+    width: auto;
   }
 }
 
@@ -94,11 +99,13 @@
     }
 
     &:hover {
-      opacity: 0.7;
+      .testImageWrapper {
+        opacity: 1;
+      }
     }
 
     &.active {
-      opacity: 1;
+      // opacity: 1;
     }
 
     img {
