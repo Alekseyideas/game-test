@@ -18,6 +18,7 @@ function App() {
     setCurAnswer,
     showR,
     setShowR,
+    respData,
   } = useApp();
 
   if (loading) return <div>Зачекайте ...</div>;
@@ -26,22 +27,13 @@ function App() {
 
   const calcNum = +((currentQuestion / questionsCount) * 100).toFixed();
 
-  const innerHtml = `
-          <h2>Результат</h2>
-          <h4>Ви заробили 60 балiв</h4>
-          <p>
-            Ваші відповіді успішно збережені. Переходимо до останього завдання інтелектуальної гри —
-            есе.
-          </p>
-     `;
-
   if (testEnd && testSuccess)
     return (
       <div className="testWrapper">
         <div className="testResultIcon testResultIcon--success">
           <IconSuccess />
         </div>
-        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: innerHtml }} />
+        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: respData }} />
       </div>
     );
   if (testEnd && !testSuccess)
@@ -50,7 +42,7 @@ function App() {
         <div className="testResultIcon testResultIcon--fail">
           <IconError />
         </div>
-        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: innerHtml }} />
+        <div className="testQuestionWrapper" dangerouslySetInnerHTML={{ __html: respData }} />
       </div>
     );
 

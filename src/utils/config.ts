@@ -1,1 +1,1 @@
-export const API_URI = 'json';
+export const API_URI = 'https://best.golovbukh.ua/nurse';

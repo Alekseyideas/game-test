@@ -15,6 +15,7 @@ export const useApp = () => {
   const [testEnd, setTestEnd] = React.useState(false);
   const [testSuccess, setTestSuccess] = React.useState(false);
   const [testId, setTestId] = React.useState<null | string>(null);
+  const [respData, setRespData] = React.useState('');
 
   const fn = async () => {
     if (document.getElementById('sp')) document.getElementById('sp')!.style.display = 'flex';
@@ -25,7 +26,7 @@ export const useApp = () => {
     }
 
     try {
-      const data = await callApi('get', '/tests.json');
+      const data = await callApi('get', '/getTestQuestions');
       setQuestionsCount(data.total_question || 0);
       setQuestions(data.questions);
       console.log(data);
@@ -48,6 +49,18 @@ export const useApp = () => {
       setCurAnswer(null);
       return setCurrentQuestion((oldQ) => oldQ + 1);
     }
+    setLoading(true);
+
+    try {
+      const data = await callApi('post', '/putTestResult');
+      setRespData(data.result_message || 'Нема повiдомлення');
+      setTestSuccess(data.success);
+      setTestEnd(true);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
 
     console.log(
       JSON.stringify({
@@ -55,9 +68,7 @@ export const useApp = () => {
         answers,
       })
     );
-    setTestSuccess(true);
 
-    setTestEnd(true);
     return null;
   };
 
@@ -73,5 +84,6 @@ export const useApp = () => {
     setCurAnswer,
     showR,
     setShowR,
+    respData,
   };
 };

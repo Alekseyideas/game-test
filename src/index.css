@@ -10,7 +10,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-#root {
+/* #root {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -23,4 +23,4 @@ code {
 
 .testWr {
   margin: auto;
-}
+} */
