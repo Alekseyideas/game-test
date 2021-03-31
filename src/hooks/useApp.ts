@@ -18,13 +18,13 @@ export const useApp = () => {
   const [respData, setRespData] = React.useState('');
 
   const fn = async () => {
-    if (document.getElementById('test_id')) {
-      const input = document.getElementById('test_id') as HTMLInputElement;
-      setTestId(input.value);
-    }
+    if (!document.getElementById('test_id')) return null;
+    const input = document.getElementById('test_id') as HTMLInputElement;
+    const tId = input.value;
+    setTestId(tId);
 
     try {
-      const data = await callApi('get', '/getTestQuestions');
+      const data = await callApi('post', '/getTestQuestions/', { testId: tId });
       setQuestionsCount(data.total_question || 0);
       setQuestions(data.questions);
       console.log(data);
