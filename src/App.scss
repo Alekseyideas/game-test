@@ -36,12 +36,11 @@
 
 .testTitle {
   font-size: 20px;
-  margin: 0;
-  padding-left: 240px;
+  margin: 40px 0 0 240px;
   max-width: 640px;
-  margin-top: 40px;
   @media screen and (max-width: 993px) {
     padding: 20px;
+    margin-left: 0;
     text-align: center;
     width: 100%;
   }

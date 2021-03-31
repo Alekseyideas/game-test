@@ -18,8 +18,6 @@ export const useApp = () => {
   const [respData, setRespData] = React.useState('');
 
   const fn = async () => {
-    if (document.getElementById('sp')) document.getElementById('sp')!.style.display = 'flex';
-    if (document.getElementById('sp0')) document.getElementById('sp0')!.style.display = 'flex';
     if (document.getElementById('test_id')) {
       const input = document.getElementById('test_id') as HTMLInputElement;
       setTestId(input.value);
@@ -52,22 +50,17 @@ export const useApp = () => {
     setLoading(true);
 
     try {
-      const data = await callApi('post', '/putTestResult');
+      const data = await callApi('post', '/putTestResult', { testId, answers });
       setRespData(data.result_message || 'Нема повiдомлення');
       setTestSuccess(data.success);
       setTestEnd(true);
     } catch (e) {
       console.log(e);
     } finally {
+      if (document.getElementById('sp')) document.getElementById('sp')!.style.display = 'flex';
+      if (document.getElementById('sp0')) document.getElementById('sp0')!.style.display = 'flex';
       setLoading(false);
     }
-
-    console.log(
-      JSON.stringify({
-        testId,
-        answers,
-      })
-    );
 
     return null;
   };
